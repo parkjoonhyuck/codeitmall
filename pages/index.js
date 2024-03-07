@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>CodietMall</title>
+        <title>CodietMall12</title>
       </Head>
       <SearchForm />
       <ProductList className={styles.products} products={products} />
