@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import styles from './Dropdown.module.css';
-// import arrowImg from '@/public/arrow.svg';
+import arrowImg from '@/public/arrow.svg';
 
-export default function Dropdown({ className, name, value, options, onChange }) {
+export default function Dropdown({ className, name, value, options = [], onChange }) {
   const [isOpen, setIsOpen] = useState(false);
   const inputRef = useRef(null);
 
@@ -33,9 +33,8 @@ export default function Dropdown({ className, name, value, options, onChange }) 
 
   return (
     <div className={classNames} onClick={handleInputClick} onBlur={handleBlur} ref={inputRef}>
-      {selectedOption.label}
-      {/* <img className={styles.arrow} src={arrowImg.src} width={12} height={9} alt="▼" /> */}
-      <div className={styles.arrow} /> {/* 화살표 아이콘을 CSS 클래스로 대체 */}
+      {selectedOption ? selectedOption.label : 'Select'}
+      <img className={styles.arrow} src={arrowImg.src} width={12} height={9} alt="▼" />
       <div className={styles.options}>
         {options.map((option) => {
           const selected = value === option.value;

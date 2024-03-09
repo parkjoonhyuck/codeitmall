@@ -16,21 +16,12 @@
 }
 
 .arrow {
-  position: absolute;
-  top: 50%;
-  right: 10px; /* 조정 가능한 값 */
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid gray; /* 아이콘 색상과 크기 조정 가능 */
-  transform: rotate(0);
+  transform: rotate(180deg);
   transition: transform 0.2s ease;
 }
 
 .opened .arrow {
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 
 .options {
@@ -47,6 +38,8 @@
   transform: scaleY(0);
   transform-origin: top center;
   transition: transform 0.2s ease-in-out;
+  max-height: 200px; /* 드롭다운의 최대 높이 설정 */
+  overflow-y: auto; /* 필요할 때 스크롤 표시 */
 }
 
 :global(.light) .options {

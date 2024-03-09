@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import styles from './Button.module.css';
+import buttonStyles from './Button.module.css';
+import buttonLinkStyles from './ButtonLink.module.css';
 
 export default function ButtonLink({ className = '', ...props }) {
-  return <Link className={`${styles.button} ${className}`} {...props} />;
+  return <Link className={`${buttonStyles.button} ${buttonLinkStyles.buttonLink} ${className}`} {...props} />;
 }

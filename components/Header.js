@@ -7,10 +7,10 @@ export default function Header() {
     <header className={styles.header}>
       <Container className={styles.container}>
         <Link className={styles.logo} href="/">
-          codietmall
+          CodietMall
         </Link>
         <Link className={styles.setting} href="/setting">
-          설정
+          Setting
         </Link>
       </Container>
     </header>
